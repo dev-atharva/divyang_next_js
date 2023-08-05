@@ -25,7 +25,7 @@ const Information = () => {
         key={3}
         icon={<BsPeople size={25} />}
         title="Community"
-        description="A diabled individual can have access to an online community on Divyang
+        description="A diabled individual can have access to an online community on EmpowerAble
        where he/she feels confertable in finding thier voice and the ablity to spread their experiences across the globe. "
       />
       <Info_card

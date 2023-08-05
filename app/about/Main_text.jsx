@@ -1,34 +1,42 @@
 const Main_text = () => {
   return (
     <div className="flex flex-col justify-start gap-2 pt-1 pl-4 max-w-[95vw]  ">
+      <p>
+      Welcome to EmpowerABLE, the platform that brings together the power of "empower" and "able" to 
+      create a supportive and inclusive community for disabled individuals. 
+      Our mission is to empower disabled individuals by providing them with opportunities, resources, 
+      and a safe space to connect, discuss, and share their experiences and grievances. </p>
+      <p>
+      EmpowerABLE is not just a platform; it's a movement that seeks to break down barriers and create a world where everyone, 
+      regardless of their abilities, can thrive. We believe in the potential and strength of disabled individuals 
+      and aim to provide them with the tools and support they need to achieve their dreams.
+      </p>
       <h2 className="font-bold text-lg text-black">Vision</h2>
       <p>
-        To build an inclusive society in which equal opportunities are provided
-        for the growth and development of Persons with Disabilities so that they
-        can lead productive, safe and dignified lives.
+      Our vision is to create a world where disabled individuals are not defined by their challenges but celebrated 
+      for their unique abilities. We envision a society that embraces diversity, breaks down barriers, and empowers 
+      every individual to reach their full potential. 
+      Our platform is more than just a community; it is a catalyst for change, sparking a movement of inclusion and understanding.
       </p>
       <br />
       <h2 className="font-bold text-lg text-black">Mission</h2>
       <p>
-        To empower Persons with Disabilities, through its various Acts/
-        Institutions/Organizations and Schemes for rehabilitation and to create
-        an enabling environment that provides such persons with equal
-        opportunities, protection of their rights and enables them to
-        participate as independent and productive members of society
+      Our mission is to empower disabled individuals by providing them with opportunities, resources, 
+      and a safe space to connect, discuss, and share their experiences and grievances.
       </p>
       <br />
       <h2 className="font-bold text-lg text-black">What we do ?</h2>
       <p>
-        Divyang is a platform which promotes various Government schemes for
-        disabled individuals and offers multiple services to help and ease the
-        life of these individuals. Current government schemes for specific
-        disabilities can be viewed on this platform very efficiently. Divyang
-        offers multiple features like voice navigation and on screen reader
-        which makes browsing very comfortable for all kinds of users. The
-        Divyangcommunity is place where the disabled individuals can feel safe
-        and comfortable in finding their voice and share their problems. The
-        main agenda of Divyang is to create awareness about the government
-        schemes for disabled people and help them avail these schemes.
+      At EmpowerABLE, we are dedicated to empowering disabled individuals through a range of 
+      transformative initiatives. Our platform serves as a vibrant community, fostering connections,
+       and providing a safe space for individuals to share experiences and find support. 
+       We actively curate opportunities and resources, ensuring equal access to education, employment, 
+       and skill development for our members. Through our grievance and support center, we listen, respond, 
+       and advocate for the needs of our community. We strive to be a beacon of change, challenging societal
+        norms and shaping perceptions about disability. Our vision extends beyond empowerment; 
+        we aim to break down barriers, celebrate abilities, and create a more inclusive and empathetic world. 
+        EmpowerABLE is a movement that harnesses the power of unity and understanding, empowering every 
+        individual to lead a life of dignity, purpose, and fulfillment.
       </p>
       <br/>
     </div>

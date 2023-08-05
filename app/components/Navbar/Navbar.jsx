@@ -24,7 +24,7 @@ const Navbar = () => {
         <Auth />
         <Notification />
       </div>
-      {hamtoggle ? <Dropdown /> : <></>}
+      {hamtoggle ? <Dropdown handleClick = {Sethamtoggle}/> : <></>}
     </div>
   );
 };

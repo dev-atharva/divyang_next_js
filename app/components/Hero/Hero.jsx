@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <div className="max-w-screen relative min-h-[60vh] sm:min-h-screen bg-violet-950">
       <div className="absolute top-1/2 left-5 sm:left-10 transform -translate-y-1/2">
-        <h1 className="text-white text-4xl font-extrabold my-5">Divyang</h1>
+        <h1 className="text-white text-4xl font-extrabold my-5">EmpowerAble</h1>
         <h1 className="text-white text-lg font-semibold">
-          Divyang is a webapp focused on creating a centralized platform
+        EmpowerAble is a webapp focused on creating a centralized platform
           disabled individuals.
           <br /> You can find various government schemes related to your
           disability.
