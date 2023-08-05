@@ -1,8 +1,20 @@
 "use client"
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "./Table.css";
+import React, { useState } from "react";
+import Modal from "./Modal"
 
 const Schemes_Table = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewMoreClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="min-w-[100vw]">
       <Table id="table_schemes">
@@ -21,10 +33,11 @@ const Schemes_Table = () => {
                 {/* <Td id="tabledata">Maharashtra</Td> */}
                 <Td id="tabledata1">Hearing</Td>
                 <Td id="tabledata2">Education</Td>
-                <Td id="tabledata3">View More</Td>
+                <Td id="tabledata3" className="cursor-pointer"  onClick={handleViewMoreClick}>View More</Td>
             </Tr>
         </Tbody>
       </Table>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };
