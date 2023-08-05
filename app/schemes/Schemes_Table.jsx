@@ -9,7 +9,7 @@ const Schemes_Table = () => {
         <Thead>
           <Tr>
             <Th style={{ "text-align": "center" }}>Name</Th>
-            <Th style={{ "text-align": "center" }}>Funding</Th>
+            {/* <Th style={{ "text-align": "center" }}>Funding</Th> */}
             <Th style={{ "text-align": "center" }}>Beneficiary</Th>
             <Th style={{ "text-align": "center" }}>Type</Th>
             <Th style={{ "text-align": "center" }}>More</Th>
@@ -18,7 +18,7 @@ const Schemes_Table = () => {
         <Tbody>
             <Tr>
                 <Td id="tabledata">Special Education and vocational Training through Government institutions</Td>
-                <Td id="tabledata">Maharashtra</Td>
+                {/* <Td id="tabledata">Maharashtra</Td> */}
                 <Td id="tabledata1">Hearing</Td>
                 <Td id="tabledata2">Education</Td>
                 <Td id="tabledata3">View More</Td>
