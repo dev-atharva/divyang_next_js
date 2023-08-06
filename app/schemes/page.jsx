@@ -18,7 +18,7 @@ const page = async () => {
   return (
     <div>
       <Searchbar />
-      <Schemes_Table schemes={schemes.schemes} />
+      <Schemes_Table schemes={schemes?.schemes} />
     </div>
   );
 };

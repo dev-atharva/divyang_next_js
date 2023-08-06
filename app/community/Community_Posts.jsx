@@ -15,7 +15,7 @@ const Community_Posts = async () => {
   const posts = await getpostsData();
   return (
     <div className="flex flex-col gap-2 max-w-[88vw] sm:max-w-[52vw] h-auto">
-      {posts.posts.map((data_in) => (
+      {posts?.posts?.map((data_in) => (
         <Community_post
           id={data_in._id}
           key={data_in._id}
