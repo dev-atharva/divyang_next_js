@@ -4,7 +4,7 @@ import Blog from "../../../../models/Blogsmodel";
 
 connectdb();
 
-export async function GET({ params: { search } }) {
+export async function GET(request,{ params: { search } }) {
   try {
     const blog = await Blog.find({
       $or: [
