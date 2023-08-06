@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 connectdb();
 
-export async function GET({ params: { search } }) {
+export async function GET(request,{ params: { search } }) {
   try {
     const scheme = await Scheme.find({
       $or: [

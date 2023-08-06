@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 connectdb();
 
-export async function GET({ params: { id } }) {
+export async function GET(request,{ params: { id } }) {
   try {
     const post = await Post.findById(id).populate("user comments.user", "name");
     if (!post) {
