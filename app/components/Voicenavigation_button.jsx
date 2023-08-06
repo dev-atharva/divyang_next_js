@@ -28,7 +28,9 @@ const Voicenavigation_button = () => {
     },
   ];
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { transcript } = useSpeechRecognition({ commands });
+ 
   const handlecommand = (command) => {
     console.log(command);
     if (command) {

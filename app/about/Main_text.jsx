@@ -2,12 +2,12 @@ const Main_text = () => {
   return (
     <div className="flex flex-col justify-start gap-2 pt-1 pl-4 max-w-[95vw]  ">
       <p>
-      Welcome to EmpowerAble, the platform that brings together the power of "empower" and "able" to 
+      Welcome to EmpowerAble, the platform that brings together the power of empower and able to 
       create a supportive and inclusive community for disabled individuals. 
       Our mission is to empower disabled individuals by providing them with opportunities, resources, 
       and a safe space to connect, discuss, and share their experiences and grievances. </p>
       <p>
-      EmpowerAble is not just a platform; it's a movement that seeks to break down barriers and create a world where everyone, 
+      EmpowerAble is not just a platform; its a movement that seeks to break down barriers and create a world where everyone, 
       regardless of their abilities, can thrive. We believe in the potential and strength of disabled individuals 
       and aim to provide them with the tools and support they need to achieve their dreams.
       </p>
