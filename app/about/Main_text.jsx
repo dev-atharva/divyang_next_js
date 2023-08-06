@@ -2,12 +2,12 @@ const Main_text = () => {
   return (
     <div className="flex flex-col justify-start gap-2 pt-1 pl-4 max-w-[95vw]  ">
       <p>
-      Welcome to EmpowerABLE, the platform that brings together the power of "empower" and "able" to 
+      Welcome to EmpowerAble, the platform that brings together the power of "empower" and "able" to 
       create a supportive and inclusive community for disabled individuals. 
       Our mission is to empower disabled individuals by providing them with opportunities, resources, 
       and a safe space to connect, discuss, and share their experiences and grievances. </p>
       <p>
-      EmpowerABLE is not just a platform; it's a movement that seeks to break down barriers and create a world where everyone, 
+      EmpowerAble is not just a platform; it's a movement that seeks to break down barriers and create a world where everyone, 
       regardless of their abilities, can thrive. We believe in the potential and strength of disabled individuals 
       and aim to provide them with the tools and support they need to achieve their dreams.
       </p>
@@ -27,7 +27,7 @@ const Main_text = () => {
       <br />
       <h2 className="font-bold text-lg text-black">What we do ?</h2>
       <p>
-      At EmpowerABLE, we are dedicated to empowering disabled individuals through a range of 
+      At EmpowerAble, we are dedicated to empowering disabled individuals through a range of 
       transformative initiatives. Our platform serves as a vibrant community, fostering connections,
        and providing a safe space for individuals to share experiences and find support. 
        We actively curate opportunities and resources, ensuring equal access to education, employment, 
@@ -35,7 +35,7 @@ const Main_text = () => {
        and advocate for the needs of our community. We strive to be a beacon of change, challenging societal
         norms and shaping perceptions about disability. Our vision extends beyond empowerment; 
         we aim to break down barriers, celebrate abilities, and create a more inclusive and empathetic world. 
-        EmpowerABLE is a movement that harnesses the power of unity and understanding, empowering every 
+        EmpowerAble is a movement that harnesses the power of unity and understanding, empowering every 
         individual to lead a life of dignity, purpose, and fulfillment.
       </p>
       <br/>
