@@ -14,9 +14,14 @@ const CommentSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  replies: [this],
+  replies: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
 const Comment =
-  mongoose.models.comments || mongoose.model("comment", CommentSchema);
+  mongoose.models.Comment || mongoose.model("Comment", CommentSchema);
 export default Comment;

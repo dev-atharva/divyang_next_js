@@ -1,6 +1,7 @@
 import Community_options from "./Community_options";
 import Posting_Form from "./Posting_Form";
 import Community_post from "./Community_post";
+import Community_Posts from "./Community_Posts";
 
 const page = () => {
   return (
@@ -8,7 +9,8 @@ const page = () => {
       <Community_options />
       <div className="min-h-[100vh] flex flex-col gap-3 ">
         <Posting_Form />
-        <Community_post />
+        {/* <Community_post /> */}
+        <Community_Posts />
       </div>
     </div>
   );

@@ -5,10 +5,6 @@ const SchemesSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide a name"],
   },
-  funding: {
-    type: String,
-    required: [true, "Please provide a funding authority"],
-  },
   type: {
     type: String,
     required: [true, "Please provide a type of scheme"],
@@ -29,6 +25,7 @@ const SchemesSchema = new mongoose.Schema({
   },
 });
 
-const Scheme =mongoose.models.schemes || mongoose.model("schemes", SchemesSchema);
+const Scheme =
+  mongoose.models.Scheme || mongoose.model("Scheme", SchemesSchema);
 
 export default Scheme;

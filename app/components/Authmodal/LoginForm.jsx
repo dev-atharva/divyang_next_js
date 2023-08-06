@@ -23,7 +23,6 @@ const Login_form = ({ onclose }) => {
       login()
       onclose();
     } catch (error) {
-      console.log("Login failed", error.message);
       toast.error(error.message);
     } finally {
       Setloading(false);

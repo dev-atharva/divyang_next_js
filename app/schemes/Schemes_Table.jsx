@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "./Table.css";
 import React, { useState } from "react";
-import Modal from "./Modal"
+import Modal from "./Modal";
 
-const Schemes_Table = () => {
+const Schemes_Table = ({ schemes }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleViewMoreClick = () => {
@@ -28,16 +28,34 @@ const Schemes_Table = () => {
           </Tr>
         </Thead>
         <Tbody>
-            <Tr>
-                <Td id="tabledata">Special Education and vocational Training through Government institutions</Td>
-                {/* <Td id="tabledata">Maharashtra</Td> */}
-                <Td id="tabledata1">Hearing</Td>
-                <Td id="tabledata2">Education</Td>
-                <Td id="tabledata3" className="cursor-pointer"  onClick={handleViewMoreClick}>View More</Td>
-            </Tr>
+          {schemes?.map((scheme) => (
+            <>
+              <Tr key={scheme._id}>
+                <Td id="tabledata">{scheme.name}</Td>
+
+                <Td id="tabledata1">
+                  <div className="flex flex-col gap-2">
+                    {scheme.beneficiary.map((benefactor, id) => (
+                      <div className="text-black font-normal" key={id}>
+                        {benefactor}
+                      </div>
+                    ))}
+                  </div>
+                </Td>
+                <Td id="tabledata2">{scheme.type}</Td>
+                <Td
+                  id="tabledata3"
+                  className="cursor-pointer"
+                  onClick={handleViewMoreClick}
+                >
+                  View More
+                </Td>
+              </Tr>
+              <Modal scheme={scheme} isOpen={isModalOpen} onClose={handleCloseModal} />
+            </>
+          ))}
         </Tbody>
       </Table>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

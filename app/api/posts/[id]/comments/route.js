@@ -2,6 +2,7 @@ import { connectdb } from "../../../../../dbconfig/dbconfig";
 import Post from "../../../../../models/Postmodel";
 import { getDataFromToken } from "../../../../../helpers/getDataFromTokens";
 import { NextResponse } from "next/server";
+import User from "../../../../../models/Usermodel";
 
 connectdb();
 
@@ -20,7 +21,7 @@ export async function POST(request, { params: { id } }) {
     if (!post) {
       return NextResponse.json({ message: "Not found" }, { status: 404 });
     }
-    const newcomment = { user_id, content };
+    const newcomment = { user:user_id, content };
     post.comments.push(newcomment);
     await post.save();
     return NextResponse.json({
@@ -30,7 +31,7 @@ export async function POST(request, { params: { id } }) {
     });
   } catch (error) {
     return NextResponse.json(
-      { message: "Something went wrong" },
+      { message: error.message },
       { status: 500 }
     );
   }

@@ -14,7 +14,12 @@ const CommentSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  replies: [this],
+  replies: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
 const postSchema = new mongoose.Schema({
@@ -23,8 +28,8 @@ const postSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  type:{
-    type:String
+  type: {
+    type: String,
   },
   content: {
     type: String,
@@ -51,5 +56,5 @@ const postSchema = new mongoose.Schema({
   ],
 });
 
-const Post = mongoose.models.posts || mongoose.model("posts", postSchema);
+const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
 export default Post;

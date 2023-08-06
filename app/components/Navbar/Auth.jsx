@@ -30,6 +30,21 @@ const Auth = () => {
     }
   };
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await axios.get("/api/users/initial");
+        if (!data || data?.user !== "verified") {
+          logout();
+        } else {
+          login();
+        }
+      } catch (error) {
+        toast.error("You are not logged in");
+      }
+    })();
+  }, [login, logout]);
+
   return (
     <>
       <Toaster />
