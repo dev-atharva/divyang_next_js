@@ -3,10 +3,9 @@ import Schemes_Table from "./Schemes_Table";
 
 const getschemesdata = async () => {
   try {
-    const res = await fetch(
-      `${process.env.DOMAIN}/api/schemes`,
-
-    );
+    const res = await fetch(`${process.env.DOMAIN}/api/schemes`, {
+      cache: "no-store",
+    });
     return res.json();
   } catch (error) {
     console.error(error);

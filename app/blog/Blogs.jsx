@@ -1,7 +1,9 @@
 import Blog_card from "./Blog_card";
 const getblogsdata = async () => {
   try {
-    const res = await fetch(`${process.env.DOMAIN}/api/blogs`,);
+    const res = await fetch(`${process.env.DOMAIN}/api/blogs`, {
+      cache: "no-store",
+    });
     return res.json();
   } catch (error) {
     console.error(error);
