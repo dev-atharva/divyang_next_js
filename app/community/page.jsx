@@ -1,6 +1,7 @@
+"use client"
+
 import Community_options from "./Community_options";
 import Posting_Form from "./Posting_Form";
-import Community_post from "./Community_post";
 import Community_Posts from "./Community_Posts";
 
 const page = () => {

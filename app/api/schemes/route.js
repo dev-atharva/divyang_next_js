@@ -21,8 +21,8 @@ export async function GET(request) {
 export async function POST(request) {
   try {
     const reqbody = await request.json();
-    const { name, type, description, eligiblity } = reqbody;
-    if (!name || !type || !description || !eligiblity) {
+    const { name, type, description, beneficiary, eligiblity } = reqbody;
+    if (!name || !type || !description || !eligiblity || !beneficiary) {
       return NextResponse.json(
         { message: "All fields are required" },
         { status: 400 }
@@ -32,7 +32,8 @@ export async function POST(request) {
       name,
       type,
       description,
-      eligiblity,
+      beneficiary: [beneficiary],
+      eligiblity: [eligiblity],
     });
     await newScheme.save();
     return NextResponse.json({

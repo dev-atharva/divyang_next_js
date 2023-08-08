@@ -1,12 +1,14 @@
 "use client";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "./Table.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
+import Store from "../../store/store";
 
 const Schemes_Table = ({ schemes }) => {
+  const latest_schemes = Store((state) => state.schemes);
+  const change_schemes_data = Store((state) => state.change_schemes);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const handleViewMoreClick = () => {
     setIsModalOpen(true);
   };
@@ -14,7 +16,10 @@ const Schemes_Table = ({ schemes }) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
+  useEffect(() => {
+    change_schemes_data(latest_schemes);
+  }, [latest_schemes, change_schemes_data]);
+  console.log(latest_schemes);
   return (
     <div className="min-w-[100vw]">
       <Table id="table_schemes">
@@ -51,7 +56,11 @@ const Schemes_Table = ({ schemes }) => {
                   View More
                 </Td>
               </Tr>
-              <Modal scheme={scheme} isOpen={isModalOpen} onClose={handleCloseModal} />
+              <Modal
+                scheme={scheme}
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+              />
             </>
           ))}
         </Tbody>

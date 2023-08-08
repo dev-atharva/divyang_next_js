@@ -1,6 +1,6 @@
 "use client"
 import { CgProfile } from "react-icons/cg";
-import { BsReply } from "react-icons/bs";
+// import { BsReply } from "react-icons/bs";
 const Comment = ({ name,content,id }) => {
   return (
     <div className="flex flex-row items-start p-1 border border-black shadow-md m-2 rounded-md">
@@ -10,10 +10,10 @@ const Comment = ({ name,content,id }) => {
         <p className="text-sm">
           {content}
         </p>
-        <div className="flex items-center justify-center gap-2">
+        {/* <div className="flex items-center justify-center gap-2">
           <BsReply />
           <span className="font-semibold my-1">Reply Comment</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

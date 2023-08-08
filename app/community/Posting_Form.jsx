@@ -1,19 +1,18 @@
 "use client";
-import { publicRuntimeConfig } from "../../next.config";
 import { CgProfile } from "react-icons/cg";
-import { BsEmojiSmile } from "react-icons/bs";
 import { AiOutlinePaperClip } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useState, useRef } from "react";
-import data from "@emoji-mart/data";
-import Picker from "@emoji-mart/react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import Store from "../../store/store";
 
 const Posting_Form = () => {
+  const posts = Store((state) => state.post);
+  const setposts = Store((state) => state.change_post);
+
   const fileInputRef = useRef(null);
   const [dropdowntoggle, Setdropdowntoggle] = useState(false);
-  const [emojiboxtoggle, Setemojiboxtoggle] = useState(false);
   const [type_post, Settypepost] = useState("Multiple");
   const [loading, Setloading] = useState(false);
   const [content, Setcontent] = useState("");
@@ -52,6 +51,7 @@ const Posting_Form = () => {
         content: content,
         imageUrl: data.secure_url,
       });
+      setposts([...posts, response.data.newPost]);
       handleRemoveClick();
       Setcontent("");
       Settypepost("Multiple");
@@ -77,22 +77,6 @@ const Posting_Form = () => {
       </div>
       <div className="flex justify-between gap-3 mt-1">
         <div className="flex flex-row gap-4 mx-4 my-1">
-          <div className="relative">
-            <BsEmojiSmile
-              onClick={() => Setemojiboxtoggle(!emojiboxtoggle)}
-              size={27}
-              className="cursor-pointer"
-            />
-            {emojiboxtoggle && (
-              <div className="absolute mt-2 bg-white border border-gray-300 rounded-md shadow-lg">
-                <Picker
-                  data={data}
-                  onEmojiSelect={(e) => Setcontent(content.concat(e.native))}
-                />
-              </div>
-            )}
-          </div>
-
           <AiOutlinePaperClip
             onClick={() => fileInputRef.current.click()}
             size={27}

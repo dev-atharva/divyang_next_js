@@ -24,8 +24,8 @@ export async function GET(request) {
 export async function POST(request) {
   try {
     const reqBody = await request.json();
-    const { title, caption, body, author, image_url } = reqBody;
-    if (!title || !caption || !body || !author || !image_url) {
+    const { title, caption, body, author, image_url, type } = reqBody;
+    if (!title || !caption || !body || !author || !image_url || !type) {
       return NextResponse.json(
         { message: "All fields are required" },
         { status: 400 }
@@ -33,6 +33,7 @@ export async function POST(request) {
     }
     const blog = new Blog({
       title,
+      type,
       caption,
       body,
       author,
@@ -42,12 +43,9 @@ export async function POST(request) {
     return NextResponse.json({
       message: "Blog created",
       success: true,
-      newScheme,
+      blog,
     });
   } catch (error) {
-    return NextResponse.json(
-      { message: "Something went wrong" },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: error.message }, { status: 500 });
   }
 }

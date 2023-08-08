@@ -25,6 +25,7 @@ const Hero = () => {
       </div>
       <Image
         src={HeroImage}
+        priority
         alt="Banner image of disabled people"
         className="absolute top-1/2 right-16 transform -translate-y-1/2 h-[70vh] w-[40vw] rounded-lg hidden sm:block"
       />

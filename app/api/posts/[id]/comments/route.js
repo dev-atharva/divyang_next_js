@@ -8,6 +8,7 @@ connectdb();
 
 export async function POST(request, { params: { id } }) {
   try {
+    const user=User
     const user_id = getDataFromToken(request);
     if (!user_id) {
       return NextResponse.json(
